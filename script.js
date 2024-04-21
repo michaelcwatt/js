@@ -17,3 +17,40 @@ let admin = name;
 
 let planetName = "earth";
 let visitorName = "hansel";
+
+//arithmatic oporator// 
+
+let x = 5; // addition // 
+let y = 10;
+let z = x + y;
+
+
+let a = 10; // subtraction //
+let b = 3;
+let c = a - b;
+
+
+let d = 10; // multiplication // 
+let e = 9; 
+let f = d * e;
+
+let g = 10; // division //
+let h = 2;
+let i = g / h;
+
+a = 10; // remainder The modulus operator (%) returns the division remainder. //
+b = 4; 
+c = a % b;
+
+a = 10; // incrementing The increment operator (++) increments numbers. //
+a++;
+b = a;
+
+a = 10; // decrementing The decrement operator (--) decrements numbers. //
+a--;
+b = a;
+
+a = 5; //  exponentiation The exponentiation operator (**) raises the first operand to the power of the second operand. //
+b = a ** 4;
+
+let oporatorPresedence = (100+200)*3; // oporator presedence Operator precedence describes the order in which operations are performed in an arithmetic expression. //
