@@ -1,119 +1,113 @@
-console.log("Hello, world!")
+const myInt = 1066;
+const myFloat = 10.66;
+const myNum1 = 1112;
+const myFloat1 = 11.11
+myInt;
+myFloat;
+myNum1;
+myFloat1;
 
-let message1 = "hello, world"; // This is a variable that can be updated. not much difference between this one and ver but there are some //
-let message2 = message1;
+//alert(typeof myInt);//
+//alert(typeof myFloat);//
 
-const myBirthday = "02.08.93"; //This is a variable that never changes, if i try to change it it will throw an error//
-
-const COLOR_BLUE = "#00F"; // There is a widespread practice to use constants as aliases for difficult-to-remember values that are known before execution.Such constants are named using capital letters and underscores.For instance, let’s make constants for colors in so-called “web” (hexadecimal) format: //
-let color = COLOR_BLUE;
-
-//task1 completed//
-
-let name = "john";
-let admin = name;
-
-//task2//
-
-let planetName = "earth";
-let visitorName = "hansel";
-
-//arithmatic oporator// 
-
-let x = 5; // addition // 
-let y = 10;
-let z = x + y;
+/* Here i have declared a few const numbers. I have used both ints and floats but they are both stored as
+    a number variable. i have also used the typeof operator to return back the type of variable stored inside 
+        the const. */ 
 
 
-let a = 10; // subtraction //
-let b = 3;
-let c = a - b;
+const lotsOfDecimals = 10.6757483929847474849;
+lotsOfDecimals;
 
+const twoDecimalPlaces = lotsOfDecimals.toFixed(2);
+twoDecimalPlaces;
 
-let d = 10; // multiplication // 
-let e = 9; 
-let f = d * e;
+//alert(lotsOfDecimals);//
+//alert(twoDecimalPlaces);//
 
-let g = 10; // division //
-let h = 2;
-let i = g / h;
+/* above i have created two more number variables the first containing a very long int number. the second however 
+    uses the .toFixed(x) method to take the long int from the first const and round it down to two decimal places.
+        i then used alerts to display the resulting information. 
+*/
 
-a = 10; // remainder The modulus operator (%) returns the division remainder. //
-b = 4; 
-c = a % b;
+let myNumber = "74";
 
-a = 10; // incrementing The increment operator (++) increments numbers. //
-a++;
-b = a;
+myNumber = Number(myNumber) + 3;
 
-a = 10; // decrementing The decrement operator (--) decrements numbers. //
-a--;
-b = a;
+//alert(myNumber); //
 
-a = 5; //  exponentiation The exponentiation operator (**) raises the first operand to the power of the second operand. //
-b = a ** 4;
+/* above i used a variable called myNumber (mn for short) to store a variable "74" i then wanted to use this 
+    as a equation to add 3, however first i had to convert the data in mn to a int instead of a string. 
+        todo this i used the Number(x) constructor to first convert the data in mn to a int then added 3.
+            */
 
-let oporatorPresedence = (100+200)*3; // oporator presedence Operator precedence describes the order in which operations are performed in an arithmetic expression. //
+let num1 = 4;
+num1++;
+//alert(num1); returns the value 5//
 
+let num2 = 4;
+num2--;
+//alert(num2); returns the value 3//
 
-// numbers // 
+num1 = 5;
+++ num1;
+//alert(num1) returns the value of 6;//
 
-a = 8;  // JavaScript has only one type of number. Numbers can be written with or without decimals. //
-b = 1.359;
+num2 = 5;
+-- num2; 
+//alert(num2); returns the value of 4//
 
-a = 123e5; // Extra large or extra small numbers can be written with scientific (exponent) notation: //
-b = 123e-5;
+/* above i have used the increment and decrement oporators to adjust two variables.
+        */
 
-// Integers (numbers without a period or exponent notation) are accurate up to 15 digits. The maximum number of decimals is 17. //
+let x = 5;
+x += 5;
+//alert(x); this shows an alert displaying 10. it does so by adding the vlaue on the right with the variable on the Left.//
 
-a = 999999999999999;
-b = 9999999999999999;
+x = 10;
+x -= 5;
+// alert(x); this displays 5. it takes the value on the right minus the variable stored on the right in this case 10.
 
-a = 0.1; // Floating point arithmetic is not always 100% accurate: //
-b = 0.2;
-c = a + b;
+x = 9;
+x *= 8;
+//alert(x); this displays 72 same as before it takes the value on the right and multiplys it byt the variable stored on the screenLeft.//
 
-c = (0.2 * 10 + 0.1 * 10) / 10; // To solve the problem above, it helps to multiply and divide: //
+x = 9;
+x /= 90;
+//alert(x); displays 0.1 it does so by dividing the value on the right with the variable on the screenLeft. //
 
-// adding numbers and strings WARNING !! JavaScript uses the + operator for both addition and concatenation. Numbers are added. Strings are concatenated. //
+/* above we used assignment operators to create a shorter syntax to do basic math. it does this by taking the
+    value on the right with the variable on the left.
+        */
 
-a = 10;  // adding two numbers together will always result in a number //
-b = 10; 
-c = a + b;
+let a = 5;
+let b = 5;
+let c = a === b;
+// alert(c); this comparison operator is the strict equality operator. it measures if a is equal to b in this case it will return true.
 
-a = "10"; // If you add two strings, the result will be a string concatenation: //
-b = "10";
-c = a + b;
+a = 5;
+b = 5;
+c = a !== b;
+// alert(c); this comparison operator is the strict non equality operator. it measures if a is not equal to b, in this case it will return false.
 
-a = 10; // If you add a string and a number, the result will be a string concatenation: // 
-b = "10";
-c = a + b;
+a = 6;
+b = 2;
+c = a < b;
+// alert(c); less than operator. this tests to see if a is less than b. in this case it will return false.
 
+a = 6;
+b = 2;
+c = a > b;
+// alert(c); more than operator. this tests to see if a is more than b. in this case it will return true.
 
-a = 10; // a common mistake is to expect 30 but due to string concatenation the awnser will be "the awnser is 1020"
-b = 20;
-c = "the awnser is: " + a + b;
+a = 6;
+b = 6;
+c = a <= b;
+// alert(c); the less than or equal two operator. This tests to see if a is less than or equal to b. in this case the result will be true.
 
+a = 8;
+b = 5;
+c = a >= b;
+// alert(c); this is the more than or equal to operator. This tests to see if a is more than or equal to b. in this case the result will be true.
 
-// numeric strings // 
-
-a = "300"; // annoyingly this works and the awnser comes out at -200 i think this is just one of those querky js things. they all work apart from the + oporator that will try and do string cocantination. 
-b = "100";
-c = b - a; 
-
-// NaN - Not a Number // 
-
-a = 100 / "apple"; // NaN is a JavaScript reserved word indicating that a number is not a legal number. Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number): //
-alert(a);
-
-// You can use the global JavaScript function isNaN() to find out if a value is a not a number: //
-
-a = 100 / "apple"; // You can use the global JavaScript function isNaN() to find out if a value is a not a number: //
-isNaN(a);
-
-// infinity // 
-
-// Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number. //
-
-
-
+/* all of the above are comparison operators i believe they compare two values and convert the result into a
+    bullion value (true or false.) i can see this being useful in loops and checking statements. 
