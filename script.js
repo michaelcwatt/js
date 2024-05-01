@@ -49,4 +49,57 @@ a = a ** b;
 a = "my";
 b = "string";
 c = a + b;
-alert(c);
+// alert(c); this is an example of string concatenates it simply adds the a to the b and displays the result.
+
+a = 1;
+b = "two";
+c = a + b;
+// alert(c); this is another example of concatenation. note that if one of the oporands is a string both will become strings.
+
+// alert(1 + 2 + "three"); this is a more complex example but the idea is the same js will first do the math 1 + 2 = 3. so the alert will be 3three.
+
+// alert("three + 3 + 3"); in this case however the string comes before the math so everything after the string will become a string.
+
+
+/*The addiction is the only operator that works with string concatenation, other operators 
+    will convert the strings to numbers. */
+
+
+a = 1;
+// alert( +a ); this will display 1 as the unary operator has no effect on numbers.
+
+
+a = -6;
+// alert( +a ); once again this will have zero effect as a = number and unary operators have no effect on numbers.
+
+
+a = true;
+// alert( +a ); this will display 1 as its not a number it will convert it into a number.
+
+a = "";
+// alert( +a ); this displays 0 or false as its not a number it will convert it into one.
+
+/* this is useful when i want to convert strings to numbers as in example in a form. 
+    prohalps when you want to add something together i will include a final example below to 
+        get in one last bit of practice.
+        */
+
+let apples = "3";
+let oranges = "4";
+// alert(+apples + +oranges); this is actually really handy. im going to feed my pets a treat.
+
+
+a = b = c = 4 + 4;
+/*alert(a);
+alert(b);
+alert(c); this is an example of daisy chaINING assignments. however its far better practice 
+            to split them into chunks. */
+
+// FINAL TASK ALSO A BIT OF FUN. //
+
+let x = prompt("First number: ");
+let y = prompt("second number: ");
+alert("your answer is " + (+x + +y));
+
+
+//OMFG I JUST MADE A FUCKING CALCULATOR..... now i know i can do anything.//
