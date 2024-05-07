@@ -1,96 +1,61 @@
-let a = "this is a string.";
-//alert(a);
-//a = 12345;
-// alert(a); a variable can be flexible one moment it can contain a string and the next it can contain a int. programming languages like this are called dynamically typed.
+// strings //
 
-a = 123;
-a = 1.23
-// alert( 1/0 ); as well as ints and floats there are other numeric values. such as infinity. you can also address it directly an example would be alert(infinity)
+const string = "The revolution will not be televised.";
+ // alert(string); this will display the contents of string variable in an alert. 
 
-a = "not a number";
-// alert(a /2); nan is sticky any mathematical operation with nan will always = nan. strictly speaking this is not an operation but a computational error.
+ /* strings must be inside qoutes of somekind in order for them to work double single or backticks. the exception
+ to the rule is if your naming another variable as displayed below.*/
 
-//a = alert(9007199254740991 + 1);
-//a = alert(9007199254740991 + 2); everything after 253-1 will no longer be accurate as it will be larger than the 64bit storage that is allocated for it.
+ const badString = string;
+ // alert(badString); this will display the original variable string because badstring is = string.
 
-/* for anything larger than the higher end, that cannot be stored in the number variable we use the BigInt.
-        the big int works by adding an 'n' to the end of the number. big ints are rarely used.
-                */
+ const single = 'single qoutes';
+ const double = "double qoutes";
+ const backtick = `Backticks`;
+ //alert(single);
+ //alert(double);
+ //alert(backtick); these will display the results of the corresponding variables.
 
-let str = "hello"; //these are double quotes. double and single quotes are practically the same thing they store strings.//
-let str2 = 'hello, single ticks'; // these are single quotes. //
-let phr = `${str} this is embedded message.`; // these are backticks, backticks are different you can use them to embed variables and expressions by using the ${...} //
-// alert(phr); //
-
-// alert(`this would be an example of an expression ... ${1+1} is equal to two.`);
-
-        /* in conclusion there is practically no difference between single quotes and double quotes they are both just
-        used to store a string. backticks however can be used to embed a variable or expression. 
-                */
-
-let booleanCheck = true; // this is an example of a boolean 
- // alert(booleanCheck); // this takes the variable boolean check and displays it to me
-let booleanCheck2 = false;
- // alert(booleanCheck2);
-
- let isGreater = 1 > 4;
- // alert(isGreater); boolean values can also come as a result of a comparison as is the example above.
-
-        /* Boolean  operators can offer two options, true or false. they can have these manually stored in them
-                or they can be the result of a comparison. */
-
-let age = null;
-// alert(age); // all this means is the value is nothing, empty or value unknown 
-
-        /* null is a special operator that basically means the special variable box holds noting, its 
-                basically a place holder. 
-                        */ 
-
-let cat;
-// alert(cat); as the variable cat has been created but nothing has been put in the box it will get the value of undefined.
-
-cat = 100;
-cat = undefined;
-// alert(cat); this is possible however usually null is used to store nothing and undefined is reserved for undefined.
-
-                /* undefined seems to be more like a placeholder than an actual thing */
-
-                /* the next type is called object or symbol. these are special because everything else is considered primative
-                        dont know anything about it yet though.
+ /* double qoutes and single qoutes work in the same way and which one you choose comes down to personal preference
+        however it is good practice to pick one and stick to it. backticks however are special!known as template literal
+                this type of string can be used to embed info. inside these template literals you can include variables
+                        or add expressions inside. examples will be included below.
                                 */
 
+const name = "chris";
+const greeting = `hello, ${name}`;
+// alert(greeting); this displays hello chris it does this by using them embeded variable name and adding it to the hello expression.
 
-let test = 1234;
-//alert(typeof test);
-test = "hello bitch";
-//alert(typeof test);
-test = 20n;
-//alert(typeof test);
+const one = "these";
+const two = "nutz";
+const joined = `${one} ${two}`;
+// alert(joined); //this will display these nutz lol. it does so by adding variable one and two together. this is known and string concatenation. 
 
-                /* the typeof operator is special and simple. it simply tells you what kind of thing is in the variable.
-                        */
+const song = "afterlife";
+const score = 9.5;
+const highScore = 10;
+const output = `I like the song ${song} i give it a score of ${(score/highScore) * 100}% `;
+// alert(output); this is more complex but it uses an expression to create a score and then display it using string concatenation.
 
-        
+const newLine = `One day you will
+                know what you have to do 
+                and do it`;
+//  alert(newLine); strings with backticks respect linebreaks and it will display them in this output i will include the equivelent below in normal double qoutes.
 
-        /*   Summary
-        There are 8 basic data types in JavaScript.
+const newLine2 = "One day you will\nknow what you have to do\nand do it.";
+// alert(newLine2); easer to read the other one is lol yoda. but i noticed this one printed out nicer. 
 
-        Seven primitive data types:
-                number for numbers of any kind: integer or floating-point, integers are limited by ±(253-1).
-                bigint for integer numbers of arbitrary length.
-                string for strings. A string may have zero or more characters, there’s no separate single-character type.
-                boolean for true/false.
-                null for unknown values – a standalone type that has a single value null.
-                undefined for unassigned values – a standalone type that has a single value undefined.
-                symbol for unique identifiers.
-                And one non-primitive data type:
-                object for more complex data structures.
-                The typeof operator allows us to see which type is stored in a variable.
+const bigMouth = 'I\'ve no idea what the fuck im doing half the time its fuck\'d i know that\'s not how to spell it';
+// alert(bigMouth); this works as the \ ignores the qoutation and therefore it thinkss its text or something fuck know to be honest.
 
-Usually used as typeof x, but typeof(x) is also possible.
-Returns a string with the name of the type, like "string".
-For null returns "object" – this is an error in the language, it’s not actually an object.
+const myString = "123";
+const myNum = Number(myString);
+//alert(myNum);
+// alert(typeof myNum); the number function takes the string inside of myString converts them to a number and stores it in the vaariable myNum then displays it in an output.
 
-*/
+const myNum2 = 123;
+const myString2 = string(myNum2);
+// alert(myString2);
+// alert(typeof myString2); this should work but for some reason does not lol.
 
-                
+
