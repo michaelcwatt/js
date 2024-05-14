@@ -1,16 +1,31 @@
-// STRING METHODS // 
+// strings - all about strings and shit //
 
-let txt = "Hello, world";
-let result = txt.repeat(10);
-// alert(result); the repeat method takes the string inside txt and repeats it the number of times displayed inside the ().
+const string1 = "A primitive string";
+const string2 = 'another primitive string';
+const string3 = `yet another primitive string`; // all of the strings 1-3 are whats known as primitive strings made using string literal.
 
-txt = "Please visit, Microsoft";
-result = txt.replace("Microsoft", "google");
-//alert(result); the replace method searches through the variable txt to find the word microsoft and replaces it with google. to replace all matches and not just the first one use the //g flag before and after.
-
-txt = "Hello, World!";
-result = txt.split(",");
-// alert(result); this convertes the string held in the txt variable into a array and is split with the "," you can also split with "|" or " ".
+const string4 = new String("a string object"); // this is a string object not entirely sure wht the purpose of it is yet.
 
 
+
+let char1 = "cat";
+let answer = char1.charAt(1);
+// alert(answer); this is a mmethod used to return back the charachter of the string at position 1.
+
+const a = "a";
+const b = "b";
+if (a < b){
+    console.log(`${a} is less than ${b}`);
+} 
+else if (a > b){
+    console.log(`${a} is more than ${b}`);
+}
+else {
+    console.log(`${a} is equal to ${b}`);
+}
+
+// above is comparing strings it basically compares if a is less than b, followed by is a more than be, then will finally conclude by saying a is equal to b. its worth noting all string comparisions are case sensititve therefore its a good idea to conver toUpper or toLower.
+
+
+// i have decided to stop this page here, odin did just tell me to book mark it and were moving onto functions which we havent covered yet. i know what one is and how to write one but still.
 
