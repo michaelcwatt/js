@@ -1,231 +1,138 @@
-                                        //Logical operators//
-                                
-    /* There are four logical operators in JavaScript: || (OR), && (AND), ! (NOT), ?? (Nullish Coalescing). 
-    Here we cover the first three, the ?? operator is in the next article.
-    Although they are called “logical”, they can be applied to values of any type, not only boolean. Their result 
-    can also be of any type.
-    Let’s see the details.
-    */
+//                  MAKING DECISIONS ON MY CODE                             //
 
-                                            // OR (||) //
+/* This section will be all about making decisions. in life we all make decisions everyday my programmes are 
+    the exact same. */
 
-    // alert(true || true); this returns back true.
-    // alert(true || false); this returns back true.
-    // alert(false || true); this returns back true. 
-    // alert(false || false); this returns back false.
-
-    /* the result will always return back true unless both operands are false. if an oporand is not a boolean 
-        then it is converted for the evaluation. for example the number '1' is treated as true and the number '0'
-        is counted as false.*/
-
-    if (1 || 0){
-        //alert("truthy"); this will return back true because it converts the 1 to true and the 0 to false and as we have seen if there is a truth it sticks.
-    }
-
-    // most of the time the or oporator is used to check if various conditions are met and example is shown below.//
-
-/*
-
-    let hour = 13;
-
-    if (hour < 9 || hour >16){
-        console.log("office is closed");
+/*  if(condition){
+        code block that will be run if condtion is true
     }
     else{
-        console.log("office is open slut");
+        this code block will run if the condition is false.
     }
 
-        in the above example the or operator is being used to check that a condition is being met. this will display office is open.
-    */ 
+    walkthough....
+
+    1. keyword if.
+    2. the condition is checked usually a comparison or does something exist or something to check. 
+        this uses the comparison operators that i have previously looked at.
+    3. if the condtion mentioned above is found to be true then the code block below is then executed between the
+        parenthesis. 
+    4. the code block is run or the program moves to the next command ... else.
+    5. else is run if the original condition is found to be false. 
+    6. the code block between the following parenthesis is run. 
+
+    its actually very user friendly to read essentially the code is saying if condition 1 is true run this code else 
+    run this code.
+
+    you can also negate the second else statement and just have a line of code to execute after the fact but you
+    need to be careful with this as this code will not be controlled by the if statement.
+
+    an example of the code can be seen below*/
+
+   /* let shoppingDone = false;
+    let childsAllowence; 
+
+    if (shoppingDone === true){
+        childsAllowence = 10;
+    }
+    else{
+        childsAllowence = 5;
+    }
+    console.log(childsAllowence);
+    
+    the code above will always return back false for the child allowance therefore the child will only ever 
+    // receive 5 lol.*/
+
     /*
-        let hour = 13;
-        let isWeekend = true;
 
-        if (hour < 8 || hour > 16 || isWeekend){
-            console.log("the office is motherfucking closed bitch");
-        }
-        else{
-            console.log("open bitch");
-        }
+    const select = document.querySelector("select");
+const para = document.querySelector("p");
 
-        in the above example we can use the or operator to check various variables in one line of code. as the isWeekend variable is true this will display the shop is closed.
-    */
+select.addEventListener("change", setWeather);
 
-        /*
+function setWeather() {
+  const choice = select.value;
 
-        The OR || operator does the following:
+  if (choice === "sunny") {
+    para.textContent =
+      "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+  } else if (choice === "rainy") {
+    para.textContent =
+      "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+  } else if (choice === "snowing") {
+    para.textContent =
+      "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+  } else if (choice === "overcast") {
+    para.textContent =
+      "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+  } else {
+    para.textContent = "";
+  }
+}
 
-        Evaluates operands from left to right.
-        For each operand, converts it to boolean. If the result is true, stops and returns the original value 
-        of that operand.
-        If all operands have been evaluated (i.e. all were false), returns the last operand.
-        A value is returned in its original form, without the conversion.
-        In other words, a chain of OR || returns the first truthy value or the last one if no truthy value is 
-        found.
+this is a more extreme example but the basic idea is the same, just lots of else if options. theres lots above i dont 
+understand but at the same time theres lots i do.*/
 
-        an example of which can be found bellow.
+/*Here we've got an HTML <select> element allowing us to make different weather choices, and a simple paragraph.
+In the JavaScript, we are storing a reference to both the <select> and <p> elements, and adding an event listener 
+to the <select> element so that when its value is changed, the setWeather() function is run.
+When this function is run, we first set a variable called choice to the current value selected in the <select> 
+element. We then use a conditional statement to show different text inside the paragraph depending on what the
+ value of choice is. Notice how all the conditions are tested in else if () { } blocks, except for the first 
+ one, which is tested in an if () { } block.
+The very last choice, inside the else { } block, is basically a "last resort" option — the code inside it will 
+be run if none of the conditions are true. In this case, it serves to empty the text out of the paragraph if 
+nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option 
+shown at the beginning.*/
 
-        */
+/*We wanted to make a special mention of testing boolean (true/false) values, and a common pattern you'll 
+come across again and again. Any value that is not false, undefined, null, 0, NaN, or an empty string ('') 
+actually returns true when tested as a conditional statement, therefore you can use a variable name on its own
+ to test whether it is true, or even that it exists (that is, it is not undefined.) So for example:*/
 
-        //alert(1 || 0); 1 is the first true so so 1 is returned back.
-        //alert(null || 1); 1 is once again the first true so it returns back 1.
-        //alert(null || 0 || 1); same as the previous two, 1 is the first true so it returns back 1.
-        //alert(null || undefined || 0); in this case there is no true so it returns back 0 the final 'OR'.
+ /*let cheese = "chedder";
 
-        let firstName = "";
-        let lastName = "";
-        let nickName = "";
-        //alert(firstName || lastName || nickName || "anonymous"); using the above method we can use the if no truth is found thing to our advantage. as if no variable is full it will return back the last one in this case anonymous. 
+ if(cheese){
+  alert("cheese is available, why not have some cheese on toast.");
+ }
+ else{
+  alert("no cheese on toast for you today *sad face*");
+ }*/
 
-        /* 
+ // in the above example because the value has something in it 'chedder' the value will return as true.
 
-        Another feature of OR || operator is the so-called “short-circuit” evaluation. It means that || 
-        processes its arguments until the first truthy value is reached, and then the value is returned 
-        immediately, without even touching the other argument.
-        The importance of this feature becomes obvious if an operand isn’t just a value, but an expression 
-        with a side effect, such as a variable assignment or a function call.
-        In the example below, only the second message is printed:
+                                //SWITCH STATEMENT// 
 
-        */
+  /* When there are multiple logical oporators the syntax can be a pain in the ass, this is where switch statments 
+  come into play. the syntax is shown below.
 
-        //true || alert("this message will not be seen as it will stop at truth.");
-        //false || alert("this message will be seen as the first option is false.");
+  switch (expression) {
+  case choice1:
+    // run this code
+    break;
 
-        //                              THE && (AND) OPERATOR.
+  case choice2:
+    // run this code instead
+    break;
 
-        //The AND operator is represented with two ampersands &&: an example is shown below//
+  // include as many cases as you like
 
-       // result = a && b; //
+  default:
+    // actually, just run this code
+    break;
+}*/
 
-       // In classical programming, AND returns true if both operands are truthy and false otherwise://
+/*Ternary operator
+There is one final bit of syntax we want to introduce you to before we get you to play with some examples. 
+The ternary or conditional operator is a small bit of syntax that tests a condition and returns one 
+value/expression if it is true, and another if it is false — this can be useful in some situations, and can
+ take up a lot less code than an if...else block if you have two choices that are chosen between via a 
+ true/false condition. The pseudocode looks like this:
 
-       //alert(true && true); this comes back true because both operands are true. //
-       //alert(false && true); this will return back false because one operand is false. //
-       //alert(true && false); this will return back false because one of the operand is false. // 
-       //alert(false && false); this returns back false because both operands are false. // 
+ condition ? run this code : run this code instead */
 
-       /*let hour = 12; 
-       let minute = 30;
+ /*const greeting = isBirthday;
+  ? "Happy birthday Mrs. Smith — we hope you have a great day!"
+  : "Good morning Mrs. Smith.";*/
 
-       if (hour == 12 && minute == 30){
-        alert("the shop is open slut");
-       } else{
-        alert("the shop is shut slut!");
-       }
-
-       this will display "the shop is open because both operands are returning back true." */
-
-       /*if (1 && 0){
-        alert("fuck this bro");
-       }
-
-       the above block of code will never be displayed because both operands arnt true so the alert code block
-       will never be run. */
-
-       /*The AND && operator does the following:
-
-        Evaluates operands from left to right.
-        For each operand, converts it to a boolean. If the result is false, stops and returns the original 
-        value of that operand.
-        If all operands have been evaluated (i.e. all were truthy), returns the last operand.
-        In other words, AND returns the first falsy value or the last value if none were found.
-
-        The rules above are similar to OR. The difference is that AND returns the first falsy value while OR 
-        returns the first truthy one.
-
-        Examples: */
-
-        //alert(1 && 0); this returns back true so it will display the last operand.
-        //alert(1 && 5); this returns back '5' because the first operand is true so the second operand is displayed.
-        // alert(null && 5); this returns back null because the first value is false so the original operand will be displayed. 
-        // alert(0 && "No one will ever see this message!"); this displays back 0 because the first operand is false so the second operand will never be seen, its kinda sad really. 
-
-        //We can also pass several values in a row. See how the first falsy one is returned://
-
-        //alert(1 && 2 && null && 3); in this case null is returned as that is the first false value.//
-
-        // alert(1 && 2 && 3); this displays 3 because its the last true value. 
-
-        /* Precedence of AND && is higher than OR ||
-            The precedence of AND && operator is higher than OR ||.
-
-            So the code a && b || c && d is essentially the same as if the && 
-            expressions were in parentheses: (a && b) || (c && d).*/
-
-
-
-            //                  ! (NOT) not operator //
-
-            /* the syntax for the not operator is '!' an exclamation mark. an exmple is as follws ...result = !value; */
-
-            /*The operator accepts a single argument and does the following:
-
-                Converts the operand to boolean type: true/false.
-                Returns the inverse value. */
-                
-                //alert(!true); returns back false because its not(!)true;
-                //alert(!0); returns back true because its not(!)false(0); 
-
-            // the double !! is sometimes used to convert a value to a boolean. //
-
-            //alert(!!"an empty string"); returns back true the first not makes it false the second makes it true.
-            //alert(!!null); false, the first value is false the second not changes it to true then the second not turns it back to false.
-
-            // The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||. //
-
-            // test 1 // 
-
-                /*
-                Write an if condition to check that age is between 14 and 90 inclusively.
-
-                “Inclusively” means that age can reach the edges 14 or 90.*/
-
-    /*let minAge = 14;
-    let maxAge = 90;
-    let testAge = 41;
-
-    if (testAge >= minAge && testAge <= maxAge){
-        alert("your age is between 14 and 90");
-    } else{
-        alert("you are not the correct age! sorry like");
-    }*/
-
-    /* Write an if condition to check that age is NOT between 14 and 90 inclusively.
-
-        Create two variants: the first one using NOT !, the second one – without it. */
-
-    /*let testAge = 101;
-    let maxAge = 90;
-    let minAge = 14;
-
-    if (testAge >= !minAge && testAge <= !maxAge){
-        alert("your age is between 14 and 90");
-    } else{
-        alert("you are not the correct age! sorry like");
-    }*/
-
-    let user = prompt("please enter your username?");
-    let master = "Admin";
-    let password = "TheMaster";
-    let passwordAttempt; 
-
-   if(user === master){
-    passwordAttempt = prompt("Please enter password");
-        if(passwordAttempt === password){
-            alert("welcome");
-         }
-         else if(passwordAttempt === "canceled" || passwordAttempt === null || passwordAttempt === ""){
-            alert("canceled!");
-         }
-        else{
-            alert("I dont know you!");
-        }
-   }
-   else if(user === "canceled" || user === null || user === ""){
-    alert("canceled!");
-   }
-   else{
-    alert("I dont know you!");
-   }
-   console.log("fuck my life i think its done.")
-   
+  
